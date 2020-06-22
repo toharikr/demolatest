@@ -18,8 +18,8 @@ import com.microsoft.applicationinsights.telemetry.Duration;
 @RestController
 public class Application {
      
-    //@Autowired
-    // TelemetryClient telemetryClient;
+    @Autowired
+    TelemetryClient telemetryClient;
     
     @RequestMapping("/")
     public String home() {
@@ -35,7 +35,7 @@ public class Application {
 
          //track a custom metric
          telemetryClient.trackMetric("custom metric", 1.0);
-        return "Wlcome AKS domain with monitoring";
+        return "Wlcome AKS domain with monitoring new";
     }
 
     public static void main(String[] args) {
