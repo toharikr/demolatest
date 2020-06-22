@@ -25,7 +25,7 @@ public class Application {
          
          var telemetryClient = new TelemetryClient(new TelemetryConfiguration()
                             {
-                                InstrumentationKey = "InstrumentationKey=52486e9d-3495-4482-95a7-7a2285d697ee" ;
+                                InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee" ;
                             });
                  
         telemetryClient.trackEvent("Sending a custom event...");
