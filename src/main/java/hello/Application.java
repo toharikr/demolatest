@@ -24,9 +24,9 @@ public class Application {
     @RequestMapping("/")
     public String home() {
          
-     TelemetryConfiguration configuration = TelemetryConfiguration.CreateDefault();
-     configuration.InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee";
-     var telemetryClient = new TelemetryClient(configuration);
+     TelemetryClient telemetryClient = new TelemetryClient();
+     telemetryClient.Context.InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee";
+
                  
         telemetryClient.trackEvent("Sending a custom event...");
 
