@@ -13,4 +13,4 @@ spec:
         - name: toharikrdemolatest 
           image: devopsazure66containerregistry.azurecr.io/toharikrdemolatest
           ports:
-          - containerPort: 80
+          - containerPort: 8080
