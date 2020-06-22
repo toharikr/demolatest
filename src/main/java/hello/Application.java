@@ -25,7 +25,7 @@ public class Application {
     public String home() {
          
      TelemetryClient telemetryClient = new TelemetryClient();
-     telemetryClient.Context.InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee";
+     telemetryClient.getContext().setInstrumentationKey("52486e9d-3495-4482-95a7-7a2285d697ee");
 
                  
         telemetryClient.trackEvent("Sending a custom event...");
