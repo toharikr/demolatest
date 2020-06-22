@@ -18,8 +18,8 @@ import com.microsoft.applicationinsights.telemetry.Duration;
 @RestController
 public class Application {
      
-    @Autowired
-    TelemetryClient telemetryClient;
+    //@Autowired
+    //TelemetryClient telemetryClient;
     
     @RequestMapping("/")
     public String home() {
