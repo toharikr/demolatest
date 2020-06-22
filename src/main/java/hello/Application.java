@@ -17,16 +17,15 @@ import com.microsoft.applicationinsights.telemetry.Duration;
 @RestController
 public class Application {
      
-    @Autowired
-     TelemetryClient telemetryClient;
+    //@Autowired
+    // TelemetryClient telemetryClient;
     
     @RequestMapping("/")
     public String home() {
          
-         var telemetryClient = new TelemetryClient(new TelemetryConfiguration()
-                            {
-                                InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee" ;
-                            });
+     TelemetryConfiguration configuration = TelemetryConfiguration.CreateDefault();
+     configuration.InstrumentationKey = "52486e9d-3495-4482-95a7-7a2285d697ee";
+     var telemetryClient = new TelemetryClient(configuration);
                  
         telemetryClient.trackEvent("Sending a custom event...");
 
